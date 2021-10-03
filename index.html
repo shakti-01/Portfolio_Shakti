@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shakti | Web developer</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="./images/s_letter_crop.png" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fcc07727e3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Nova+Oval&family=Nova+Round&family=Nunito:wght@600&family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"></link>
+    <link rel="stylesheet" href="./hamMenu.css"></link>
+</head>
+<body>
+    <!-- -----------preloader----------- -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div id="loader-caption">Please wait . . .</div>
+    </div>
+    <!------------------- nav bar ------------------>
+    <div class ="nav">
+    <nav class="navigationbar">
+    <ul class="navlist">
+        <li class="navop mobile-menu">
+            <div class="menu-wrapper">
+                <div class="hamburger-menu"></div>	  
+            </div>
+            <div class="dropdown-content">
+                <a href="#about__sec">ABOUT</a>
+                <a href="#edu__sec">QUALIFICATION</a>
+                <a href="#proj__sec">WORKS</a>
+                <a class="navmenu-contact">GET IN TOUCH</a>
+            </div>
+        </li>
+        
+        <li class="navop navmenu-contact not-mobile">GET IN TOUCH</li>
+        <a href="#proj__sec" class="not-mobile"><li class="navop">WORKS</li></a>
+        <a href="#edu__sec" class="not-mobile"><li class="navop">QUALIFICATION</li></a>
+        <a href="#about__sec" class="not-mobile"><li class="navop">ABOUT</li></a>
+        <li class="nav_brand"><i onclick="window.scrollTo(0, 0);" class="fas fa-cannabis"></i></li>
+        <li style="float:left;margin-left:50px;color:var(--grey);padding:16px 14px;">IND - Odisha</li>
+    </ul>
+    </nav>
+    </div>
+    <!-------------- hero section ----------------------->
+    <section class="hero_sec" id="hero__sec">
+        <div class="wrapper">
+            <span class="type">
+                Hi! I'm Shakti.
+            </span><br/>
+            <div class="subtitle">Web developer and designer | Welcome to my online space. </div>
+            
+        </div>
+        <a href="#about__sec"><i class="fas fa-chevron-down arrowhomepage"></i></a>
+    </section>
+    <!-- ----about section/skills -->
+    <section class="about_sec" id="about__sec">
+        <h3>Let me introduce myself :</h3>
+        <div>
+        <div class="color"></div></div>
+        <div class="skill_flex_container">
+        <div class="my_info">
+            Hello ,my name is Shakti Prasad Nanda<br/>
+Currently pursuing Computer Science and Engineering at Silicon Institute of Technology.
+ I am into Programming, Problem solving, Developing and Designing. 
+ I make sure to have a least bit of interest to anything I do instead of doing it just for the sake of completion.
+ Also try put creativity in my works as much as can be accompanied by my skillset.
+ I am good at tweaking stuff and making them better than they are. 
+ I always believe in being simple and unique.
+By the way, check out some of my <a href="#proj__sec" style="text-decoration: none;color: red;">work.</a>
+        </div>
+        <div class="skillbar">
+            <div class="skill_name">PROBLEM SOLVING</div>
+            <div class="bar" id="bar1">85%</div>
+            <div class="skill_name">PYTHON</div>
+            <div class="bar" id="bar2">60%</div>
+            <div class="skill_name">REACT</div>
+            <div class="bar" id="bar3">30%</div>
+            <div class="skill_name">CSS</div>
+            <div class="bar" id="bar4">70%</div>
+            <div class="skill_name">JAVA SCRIPT</div>
+            <div class="bar" id="bar5">60%</div>
+            <!-- divide % by 1.3 to give width in vw unit -->
+        </div>
+    </div>
+    </section>
+    <!-- ---education/ qualification section -->
+    <section class="edu_sec" id="edu__sec">
+        <h3 id="qua_head">My qualification :</h3>
+       
+        <div class="wrap_edu">
+            <div class="qualification" title="Score: CGPA 9.4">
+                <p class="qua_title">Graduation - B.Tech</p>
+                <p class="qua_from">Silicon Institute of Technology [SIT]</p>
+                <p class="qua_date"><i class='far fa-calendar-alt'></i> 03/2018</p>
+            </div>
+            <div class="qua_stick"></div>
+            <div class="qualification" title="Score: 88.4%">
+                <p class="qua_title">Higher Secondary Education 12th</p>
+                <p class="qua_from">D.A.V. Public School, KNG </p>
+                <p class="qua_date"><i class='far fa-calendar-alt'></i> 04/2020</p>
+            </div>
+            <div class="qua_stick"></div>
+            <div class="qualification" title="Score: 94.4%">
+                <p class="qua_title">Secondary Education</p>
+                <p class="qua_from">D.A.V. Public School, KNG </p>
+                <p class="qua_date"><i class='far fa-calendar-alt'></i> 2024</p>
+            </div>
+            <div class="qua_stick"></div>
+        </div>
+        
+    </section>
+    <!-- projects/ works section -->
+    <section class="proj_sec" id="proj__sec">
+        <h3>Check out some of my works :</h3>
+        <div class="image_slider_container">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+                    <div class="slide first">
+                        <div class="slide_grid_container">
+                            <img class="proj_img" src="./images/blockgame_proj.png" alt="block game"/>
+                            <p class="proj_det"><b>Mini block game</b> - Its has a timer which players can set and play the game which to click the moving block 
+                                and score is displayed at end with a feedback depending on score.
+                                Features: background music, click effects , difficulty. Make sure to try it out atleast once. Built with neon theme.
+                            </p>
+                            <button class="proj_btn" onclick="window.open('https:/block-game.vercel.app/','_self')">Check it out!</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide_grid_container">
+                            <img class="proj_img" src="./images/photofilter_proj.png" alt="photo filter"/>
+                            <p class="proj_det"><b>Photo filter</b> - applies unique filters to the photos and then draws it on a canvas which can then be downloaded.
+                                Feel free to try them free of cost.
+                            </p>
+                            <button class="proj_btn" onclick="window.open('https:/photo-filter.vercel.app/','_self')">Check it out!</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide_grid_container">
+                            <img class="proj_img" src="./images/drawing_proj.png" alt="drawing tool"/>
+                            <p class="proj_det"><b>Drawing template</b> - Uses a canvas to paint on by a simple algorithm everytime the mouse is dragged. Customizable template size,
+                                and colors. Create the art piece you want.
+                            </p>
+                            <button class="proj_btn" onclick="window.open('https:/drawing-tool-gilt.vercel.app/','_self')">Check it out!</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide_grid_container">
+                            <img class="proj_img" src="./images/greenscreen_proj.png" alt="green screen tool"/>
+                            <p class="proj_det"><b>Chroma key effect tool</b> - It applies a custom background to the images with a green screen. 
+                                It uses a custom library to manipulate the image pixels. Comes with unwanted cases handling and proper instructions.
+                            </p>
+                            <button class="proj_btn" onclick="window.open('https:/green-screen.vercel.app/','_self')">Check it out!</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide_grid_container">
+                            <img class="proj_img" src="./images/port_proj.png" alt="my portfoliol"/>
+                            <p class="proj_det"><b>My personal site</b> - Its a responsive site which showcases my works and a brief intoduction to me 
+                                and my works. Yes its the same project you are currently on. Uses jquery for animation. It serves also serves as a way to contact me.
+                            </p>
+                            <button class="proj_btn" onclick="window.scrollTo(0, 0);">Check it out!</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+            </div>
+            <div class="all_proj">
+                <a href="https://github.com/shakti-01">View all my works <i class="material-icons">arrow_forward</i></a>
+            </div>
+        </div>
+
+        <div class="cv_wrapper">
+        <button class="custom-btn btn-cv"><span>Download CV</span></button>
+        </div>
+        <!-- footer section inside the project section------ -->
+        <p class="footer">
+            
+            <svg id="ecBrVRO395n1" viewBox="0 50 520 200" height="70" width="130" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+                <path class="er33" d="M240.9603,137.39612C275.44196,51.192,191.2896,56.04373,140.49862,91.59741C117.77718,107.50242,104.9056,139.49526,94.69991,163.98892C87.33639,181.66138,82.98067,201.69392,93.22253,220.12927C123.58229,274.77683,214.29683,131.62728,168.56879,127.05448C160.97322,126.29492,159.58847,129.11215,158.22715,135.91875C152.53371,164.38594,203.40845,152.89761,208.45799,183.19483C211.31245,200.32159,202.83959,222.8576,189.25208,233.42567C186.88757,235.26474,184.77919,242.28994,187.7747,242.28994C208.40219,242.28994,252.54926,137.71964,269.03047,144.78301C286.72202,152.3651,260.97153,172.85319,276.41736,172.85319C287.95111,172.85319,290.483351,143.06284,305.964911,144.78301C319.050861,146.237,304.67153,162.79689,317.78393,163.98892C334.85085,165.54046,425.780351,109.562288,444.838411,101.939058"  fill="none" stroke="rgb(63,87,135)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <!--length of path= 1015.8640747070312 -->
+            
+            <br/>
+            <i class="material-icons star">star</i><i class="material-icons star">star</i><i class="material-icons star">star</i>
+            <br/>
+            <i class='far fa-copyright'></i> Shakti Prasad Nanda
+        </p>
+    </section>
+    <div class="contact_sec">
+        <button id="close_contact"><i id="icon_xyz"class="material-icons">close</i> CLOSE</button>
+        <div class="contact_container">
+            <p>Hit me up for any querries</p>
+            <a href="mailto:pnandashakti@gmail.com">pnandashakti@gmail.com</a>
+            
+            <div class="contact_btns">
+                <i class='fab fa-github' onclick="window.open('https:/github.com/shakti-01');"></i><i class='fab fa-linkedin' onclick="window.open('https:/www.linkedin.com/in/shakti-prasad-nanda-05166620b');"></i>
+            </div>
+        </div>
+    </div>
+    
+        
+    <!-- scripts -->
+    <script src="./smooth-scrollbar.js"></script>
+    <script src="./scripts.js"></script>
+</body>
+</html>
