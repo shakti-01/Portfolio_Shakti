@@ -97,10 +97,3 @@ $('.menu-wrapper').on('click', function() {
         $('.dropdown-content').css('display','none');
     }
 })
-
-
-
-
-    
-    
-

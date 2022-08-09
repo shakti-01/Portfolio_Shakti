@@ -1,0 +1,94 @@
+/* pre req stuff  */
+:root{
+    --black: rgb(29, 28, 28);
+    --orange: rgb(255, 136, 0);
+    --beige: #e0e5ec;
+    --deeporange: orangered;
+    --grey: grey;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    cursor: url(./images/rsz_35.png),auto;
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+}
+/* scroll bar custom */
+ html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* ------------------------------------------- */
+#gallary{
+    background-color: var(--orange);
+    min-height: 100vh;
+
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+.grid-item{
+    /* outline: 2px green solid; */
+    padding: 1vh;
+    margin-bottom: 4vh;
+    width: 26vw;
+}
+
+.cust-img{
+    border: 2px solid black;
+    max-width: 25vw;
+}
+/* .card-cont{
+    outline: 2px solid white;
+} */
+.cust-a{
+    text-decoration: none;
+    color: rgb(95, 0, 142);
+}
+.cust-a:hover{ text-decoration: underline;}
+
+/* ---------------------------------- */
+@media screen and (max-width: 1000px){
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+    .grid-item{
+        width: 35vw;
+    }
+    .cust-img{
+        max-width: 34vw;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .grid-container{
+        grid-template-columns: auto;
+    }
+    .grid-item{
+        width: 75vw;
+    }
+    .cust-img{
+        max-width: 74vw;
+    }
+}
