@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="./images/s_letter_crop.png" type="image/icon type">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fcc07727e3.js" crossorigin="anonymous"></script>
@@ -16,6 +16,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css"></link>
     <link rel="stylesheet" href="./hamMenu.css"></link>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
     <!-- -----------preloader----------- -->
@@ -24,7 +26,7 @@
         <div id="loader-caption">Please wait . . .</div>
     </div>
     <!------------------- nav bar ------------------>
-    <div class ="nav">
+    <div class ="cust-nav">
     <nav class="navigationbar">
     <ul class="navlist">
         <li class="navop mobile-menu">
@@ -61,31 +63,28 @@
     </section>
     <!-- ----about section/skills -->
     <section class="about_sec" id="about__sec">
-        <h3>Let me introduce myself :</h3>
-        <div>
-        <div class="color"></div></div>
+        <h2>Let me introduce myself :</h2>
         <div class="skill_flex_container">
         <div class="my_info">
             Hello ,my name is Shakti Prasad Nanda<br/>
 Currently pursuing Computer Science and Engineering at Silicon Institute of Technology.
  I am into Programming, Problem solving, Developing and Designing. 
- I make sure to have a least bit of interest to anything I do instead of doing it just for the sake of completion.
+ I make sure to have a least bit of interest to anything I do.
  Also try put creativity in my works as much as can be accompanied by my skillset.
- I am good at tweaking stuff and making them better than they are. 
- I always believe in being simple and unique. Im familiar with Unity engine, django, react, js, python, ML basics..
+ I am good at tweaking stuff and I always believe in being simple and unique.
 Check out some of my <a href="#proj__sec" style="text-decoration: none;color: red;">work.</a>
         </div>
         <div class="skillbar">
             <div class="skill_name">PROBLEM SOLVING</div>
-            <div class="bar" id="bar1">85%</div>
+            <div class="bar" id="bar1" data-percentage="85">85%</div>
             <div class="skill_name">PYTHON</div>
-            <div class="bar" id="bar2">60%</div>
+            <div class="bar" id="bar2" data-percentage="60">60%</div>
             <div class="skill_name">REACT</div>
-            <div class="bar" id="bar3">30%</div>
+            <div class="bar" id="bar3" data-percentage="30">30%</div>
             <div class="skill_name">CSS</div>
-            <div class="bar" id="bar4">70%</div>
+            <div class="bar" id="bar4" data-percentage="70">70%</div>
             <div class="skill_name">JAVA SCRIPT</div>
-            <div class="bar" id="bar5">60%</div>
+            <div class="bar" id="bar5" data-percentage="60">60%</div>
             <!-- divide % by 1.3 to give width in vw unit -->
         </div>
     </div>
@@ -119,65 +118,73 @@ Check out some of my <a href="#proj__sec" style="text-decoration: none;color: re
     <!-- projects/ works section -->
     <section class="proj_sec" id="proj__sec">
         <h3>Check out some of my works :</h3>
-        <div class="image_slider_container">
-            <div class="slider">
-                <div class="slides">
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
-
-                    <div class="slide first">
-                        <div class="slide_grid_container">
-                            <img class="proj_img" src="./images/blockgame_proj.png" alt="block game"/>
-                            <p class="proj_det"><b>Mini block game</b> - Its has a timer which players can set and play the game which to click the moving block 
-                                and score is displayed at end with a feedback depending on score.
-                                Features: background music, click effects , difficulty. Make sure to try it out atleast once. Built with neon theme.
-                            </p>
-                            <button class="proj_btn" onclick="window.open('https://block-game.vercel.app','_self')">Check it out!</button>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_grid_container">
-                            <img class="proj_img" src="./images/photofilter_proj.png" alt="photo filter"/>
-                            <p class="proj_det"><b>Photo filter</b> - applies unique filters to the photos and then draws it on a canvas which can then be downloaded.
-                                Feel free to try them free of cost.
-                            </p>
-                            <button class="proj_btn" onclick="window.open('https://photo-filter.vercel.app','_self')">Check it out!</button>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_grid_container">
-                            <img class="proj_img" src="./images/drawing_proj.png" alt="drawing tool"/>
-                            <p class="proj_det"><b>Drawing template</b> - Uses a canvas to paint on by a simple algorithm everytime the mouse is dragged. Customizable template size,
-                                and colors. Create the art piece you want.
-                            </p>
-                            <button class="proj_btn" onclick="window.open('https://drawing-tool-gilt.vercel.app','_self')">Check it out!</button>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="slide_grid_container">
-                            <img class="proj_img" src="./images/greenscreen_proj.png" alt="green screen tool"/>
-                            <p class="proj_det"><b>Chroma key effect tool</b> - It applies a custom background to the images with a green screen. 
-                                It uses a custom library to manipulate the image pixels. Comes with unwanted cases handling and proper instructions.
-                            </p>
-                            <button class="proj_btn" onclick="window.open('https://green-screen.vercel.app','_self')">Check it out!</button>
-                        </div>
+        <div id="carouselProj" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselProj" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselProj" data-slide-to="1"></li>
+              <li data-target="#carouselProj" data-slide-to="2"></li>
+              <li data-target="#carouselProj" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="pslide">
+                    <div class="slide_grid_container">
+                        <img class="proj_img" src="./images/blockgame_proj.png" alt="block game"/>
+                        <p class="proj_det"><b>Mini block game</b> - Its has a timer which players can set and play the game which to click the moving block 
+                            and score is displayed at end with a feedback depending on score.
+                            Features: background music, click effects , difficulty. Make sure to try it out atleast once. Built with neon theme.
+                        </p>
+                        <button class="proj_btn" onclick="window.open('https://block-game.vercel.app','_self')">Check it out!</button>
                     </div>
                 </div>
-                
+              </div>
+              <div class="carousel-item">
+                <div class="pslide">
+                    <div class="slide_grid_container">
+                        <img class="proj_img" src="./images/photofilter_proj.png" alt="photo filter"/>
+                        <p class="proj_det"><b>Photo filter</b> - applies unique filters to the photos and then draws it on a canvas which can then be downloaded.
+                            Feel free to try them free of cost.
+                        </p>
+                        <button class="proj_btn" onclick="window.open('https://photo-filter.vercel.app','_self')">Check it out!</button>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pslide">
+                    <div class="slide_grid_container">
+                        <img class="proj_img" src="./images/drawing_proj.png" alt="drawing tool"/>
+                        <p class="proj_det"><b>Drawing template</b> - Uses a canvas to paint on by a simple algorithm everytime the mouse is dragged. Customizable template size,
+                            and colors. Create the art piece you want.
+                        </p>
+                        <button class="proj_btn" onclick="window.open('https://drawing-tool-gilt.vercel.app','_self')">Check it out!</button>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pslide">
+                    <div class="slide_grid_container">
+                        <img class="proj_img" src="./images/greenscreen_proj.png" alt="green screen tool"/>
+                        <p class="proj_det"><b>Chroma key effect tool</b> - It applies a custom background to the images with a green screen. 
+                            It uses a custom library to manipulate the image pixels. Comes with unwanted cases handling and proper instructions.
+                        </p>
+                        <button class="proj_btn" onclick="window.open('https://green-screen.vercel.app','_self')">Check it out!</button>
+                    </div>
+                </div>
+              </div>
             </div>
-            <div class="navigation-manual">
-                <label for="radio1" class="manual-btn"></label>
-                <label for="radio2" class="manual-btn"></label>
-                <label for="radio3" class="manual-btn"></label>
-                <label for="radio4" class="manual-btn"></label>
-            </div>
-            <div class="all_proj">
-                <a href="./works.html">View all my works <i class="material-icons">arrow_forward</i></a>
-            </div>
+            <a class="carousel-control-prev" href="#carouselProj" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselProj" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        <div class="all_proj">
+            <a href="./works.html">View all my works <i class="material-icons">arrow_forward</i></a>
         </div>
-
+    </section>
         <div class="cv_wrapper">
         <button class="custom-btn btn-cv" onclick="alert('Currently not available')"><span>Download CV</span></button>
         </div>
@@ -194,7 +201,7 @@ Check out some of my <a href="#proj__sec" style="text-decoration: none;color: re
             <br/>
             <i class='far fa-copyright'></i> Shakti Prasad Nanda
         </p>
-    </section>
+    
     <div class="contact_sec">
         <button id="close_contact"><i id="icon_xyz"class="material-icons">close</i> CLOSE</button>
         <div class="contact_container">
@@ -210,7 +217,10 @@ Check out some of my <a href="#proj__sec" style="text-decoration: none;color: re
     
         
     <!-- scripts -->
-    <script src="./smooth-scrollbar.js"></script>
+    
     <script src="./scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

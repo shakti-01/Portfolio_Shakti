@@ -23,23 +23,19 @@ body{
     box-sizing: border-box;
 }
 /* scroll bar custom */
- html {
+html{
     scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar {
     width: 5px;
 }
-
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
-  
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 10px;
 }
-  
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
@@ -48,7 +44,7 @@ body{
     position: fixed;
     top:0;
     left:0;
-    background: black;
+    background: var(--black);
     width: 100%;
     height:100vh;
     z-index: 1000;
@@ -105,7 +101,7 @@ body{
     }
 }
 /* --------------Navigation bar---------------- */
-.nav{
+.cust-nav{
     position: fixed;
     width: 100vw;
     z-index: 10;
@@ -123,12 +119,11 @@ body{
     padding:1rem 1.2rem;
     cursor: pointer;
     color:var(--deeporange);
-    margin-right:5px;
-    border-bottom:solid 3px transparent;
+    margin-right:0.3em;
+    border-bottom:solid 0.187em transparent;
 }
 .navop:hover{
-    color:white !important;
-    border-bottom:solid 3px var(--orange);
+    border-bottom:solid 0.187em var(--orange);
 }
 .nav_brand{
     position: relative;
@@ -149,14 +144,13 @@ body{
     text-align: center;/* jumping arrow */
 }
 .wrapper {
-     min-height:87vh; 
+    min-height:87vh; 
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     justify-content: end;
     align-content: center;
-    
-  }
+}
 .type {
     animation: typing 3.5s steps(17), blink .5s step-end infinite alternate;
     white-space: nowrap;
@@ -203,12 +197,11 @@ body{
     color:black;
     min-height:100vh;
     padding-top:2vh;
-    background-image: linear-gradient(-45deg,#E5D7C9, #FF8800);
+    background-image: linear-gradient(-45deg, var(--beige) -40%, var(--orange) 100%);
 }
-.about_sec h3{
+.about_sec h2{
     font-family: 'Nova Round', cursive;
-    font-size: 3ch;
-    text-shadow: 4px 6px 5px rgb(30,30,30,0.3);
+    text-shadow: 2px 3px 4px rgb(30,30,30,0.3);
     padding-left: 2rem;
 }
 .skill_flex_container{
@@ -218,13 +211,14 @@ body{
     align-items: center;
 }
 .my_info{
+    background: var(--orange);
     margin:1em;
     padding:1em ;
     border: solid 2px rgba(255,255,255,0.4);
     border-right: 2px solid rgba(255,255,255,0.2);
     border-bottom: 2px solid rgba(255,255,255,0.2);
     border-radius: 10px;
-    box-shadow: 0 5px 5em rgba(255,255,255,0.3);
+    
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
     overflow: hidden;
@@ -245,15 +239,7 @@ body{
 .my_info:hover::before{
     transform: skewX(45deg) translateX(-10em);
 }
-section .color{
-    position:absolute;
-    height:7em;
-    width: 48vw;
-    top:168vh;
-    left:46vw;
-    background: rgb(255, 153, 0);
-    filter: blur(4em);
-}
+
 .skillbar{
     padding: 8px;
     font-family: 'Noto Sans', sans-serif;
@@ -347,24 +333,20 @@ section .color{
     font-family: 'Nova Round', cursive;
     font-weight: 800;
 }
-/* .qua_from{
 
-}
-.qua_date{
-
-} */
 .edu_sec p{
     margin:0;
 }
 /* ----------------------work/project section----------------------- */
 .proj_sec{
     min-height: 100vh;
-    background: #e0e5ec;
+    background: var(--orange);
 }
 .proj_sec h3{
-    text-shadow: 0 4px 6px  rgba(0, 0, 0, 0.3);
-    background: var(--orange);
+    text-shadow: 0 3px 4px  rgba(0, 0, 0, 0.3);
+    
     margin:0;
+    margin-bottom: 1.6em;
     padding:10px;
     font-family: 'Nova Round', cursive;
     font-size: 3ch;
@@ -374,45 +356,22 @@ section .color{
 .proj_sec p{
     margin:0;
 }
-.image_slider_container{
-    min-height:75vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background: var(--orange);
-    cursor: default;
-    padding-bottom: 10px;
+.carousel-inner{
+    background: var(--black);
+    color: white;
 }
-.slider{
-    box-sizing: content-box;
-    width:60vw;
-    min-height:50vh;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 20px solid var(--black);
-}
-.slides{
-    width:500%; /* no. of slides +1 x 100 % */
-    min-height: 50vh; /* same height as slider */
-    display: flex;
-}
-.slides input{
-    display: none;
-}
-.slide{
-    width: 20%; /* 100% / no. of slides +1 = 100/5 = 20% */
-    transition: 1.2s;
+.pslide{
+    padding: 1.3rem 5vw;
+    padding-bottom: 1.8em;
     overflow:hidden;
 }
 
 .proj_img{ 
     grid-area: image;
     align-self:flex-start;
-    border:solid 4px black;
+    border:solid 4px var(--deeporange);
     border-radius: 10px;
-    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5),
-                4px 6px 20px 0 rgba(0, 0, 0, 0.39);
+    
     max-width: 35vw ;
 }
 .proj_det{ 
@@ -431,8 +390,8 @@ section .color{
     max-height: 40px;
     cursor: pointer;
     justify-self: center;
-    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5),
-                4px 6px 20px 0 rgba(0, 0, 0, 0.39);
+    /*box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5),
+                4px 6px 20px 0 rgba(0, 0, 0, 0.39);*/
     transition: 200ms;
 }
 .proj_btn:hover{
@@ -440,75 +399,41 @@ section .color{
 }
 
 .slide_grid_container{
-    width:60vw;/* same as .slider */
+    
     min-height: 50vh;
     padding:5px;
     display: grid;
-    grid-gap: 7px;
+    grid-gap: 1em;
     justify-content: space-around;
     grid-template-areas: 
     'image image detail'
     'image image detail'
     'button button detail';
 }
-/* ----manual slider nav css */
-.navigation-manual{
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
+.proj_det{
+    padding: 1em;
 }
-.manual-btn{
-    border: solid 2px var(--black);
-    padding:5px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.manual-btn:not(:last-child){
-    margin-right: 2rem;
-}
-.manual-btn:hover{
-    background: var(--black);
-}
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-#radio2:checked ~ .first{
-    margin-left: -20%; /* 100/n+1 = 20 = 100/(4+1) */
-}
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-/* #radio5:checked ~ .first{
-    margin-left:-66.666668%;
-} */
-
 /* link to all my works */
 .all_proj{
     text-align: right;
     width: 100%;
-    margin-right: 1.25em;
 }
 .all_proj a{
+    margin-right: 2.25em;
     text-decoration:none;
-    color: var(--black);
+    color: black;
 }
 .all_proj a:hover{
+    color:black;
     text-decoration: underline;
     transform: scale(1.2);
     display: inline-block;
-    transition: transform ease 500ms;
     position: relative;
-    left: -2em;
-    font-weight: bolder;
+    transition: all ease 1000ms;
 }
 .all_proj a:hover i{
     transform: rotateZ(-90deg);
-    transition: transform ease 500ms;
+    transition: transform ease 1000ms;
 }
 .all_proj i{
     position: relative;
@@ -519,20 +444,18 @@ section .color{
     text-align: center;
 }
 .custom-btn {
-    margin-top:7px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
+    margin-top:1em;
+    color: white;
+    border-radius: 0.3em;
+    padding: 0.4em 1.5em;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    /* box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-                     7px 7px 20px 0px rgba(0,0,0,.1),
-                     4px 4px 5px 0px rgba(0,0,0,.1); */
     border: none;
+    outline: none;
     background: var(--deeporange);
 }
 .custom-btn:hover {
@@ -587,7 +510,7 @@ section .color{
     z-index: 30;
     height:100vh;
     width: 100%;
-    background: rgb(10, 10, 10,0.98);
+    background: rgba(10, 10, 10,0.98);
     display: block;
     color:whitesmoke;
 }
