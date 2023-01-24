@@ -8,7 +8,7 @@ font-family: 'Noto Sans', sans-serif;*/
 :root{
     --black: rgb(29, 28, 28);
     --orange: rgb(255, 136, 0);
-    --beige: #e0e5ec;
+    --beige: rgb(218, 214, 209);
     --deeporange: orangered;
     --grey: grey;
 }
@@ -197,7 +197,7 @@ html{
     color:black;
     min-height:100vh;
     padding-top:2vh;
-    background-image: linear-gradient(-45deg, var(--beige) -40%, var(--orange) 100%);
+    background-image: linear-gradient(180deg, var(--orange) 80%, var(--deeporange) 100%);
 }
 .about_sec h2{
     font-family: 'Nova Round', cursive;
@@ -371,8 +371,16 @@ html{
     align-self:flex-start;
     border:solid 4px var(--deeporange);
     border-radius: 10px;
-    
     max-width: 35vw ;
+}
+.pslide::before{
+    content: '';
+    position: absolute;
+    background: var(--deeporange);
+    height: 40vh;
+    width: 1em;
+    top:3em;
+    left:-0.6em;
 }
 .proj_det{ 
     grid-area: detail;
@@ -380,31 +388,29 @@ html{
 }
 .proj_btn{ 
     grid-area: button;
-    background-color: var(--black);
-    color: var(--orange);
-    padding:7px 26px;
-    outline: 2px solid var(--orange);
-    outline-offset: -0.25em;
+    background-color: var(--orange);
+    border-radius: 0.4em;
+    color: black;
     border: none;
+    padding:0.43em 1.3em;
     width:max-content;
-    max-height: 40px;
+    max-height: 2.2em;
     cursor: pointer;
     justify-self: center;
-    /*box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.5),
-                4px 6px 20px 0 rgba(0, 0, 0, 0.39);*/
-    transition: 200ms;
+    align-self: center;
 }
 .proj_btn:hover{
-    transform: scale(1.06);
+    background-color: var(--deeporange);
 }
 
 .slide_grid_container{
     
     min-height: 50vh;
-    padding:5px;
+    padding:0.3em;
     display: grid;
-    grid-gap: 1em;
+    column-gap: 2em;
     justify-content: space-around;
+    grid-template-rows: auto auto 1fr;
     grid-template-areas: 
     'image image detail'
     'image image detail'
@@ -619,7 +625,7 @@ html{
 }
 @media screen and (max-width: 650px){
     .hero_sec{
-        background: rgb(218, 214, 209);
+        background: var(--beige);
     }
     .type{
         justify-content: center;

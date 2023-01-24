@@ -28,14 +28,16 @@ window.addEventListener("scroll", function(){
     if(window.scrollY===0){
         $(".navlist").css("background","transparent");
         $(".navop").css("color","var(--deeporange)");
-        $(".nav").slideDown(500,function(){ clearTimeout(nav_time)});
+        $(".cust-nav").slideDown(500,function(){ clearTimeout(nav_time)});
     }
     else{
         $(".navlist").css("background","var(--black)");
         $(".navop").css("color","whitesmoke");
-        $(".nav").show(300);
-        clearTimeout(nav_time);
-        nav_time = setTimeout(function(){ $(".nav").slideUp(800); }, 7000);
+        if(window.innerWidth>725){
+            $(".cust-nav").show(300);
+            clearTimeout(nav_time);
+            nav_time = setTimeout(function(){ $(".cust-nav").slideUp(800); }, 7000);
+        }
     }
 });
 /* Intersection observer API doc //formyref- https://usefulangle.com/post/118/javascript-intersection-observer */
